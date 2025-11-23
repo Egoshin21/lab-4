@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Добро пожаловать</title>
+</head>
+<body>
+    <p>
+        <strong>Добро пожаловать!</strong> 
+        <time datetime="2025-11-23">Сегодня</time> 
+        я начал изучать язык разметки <strong>HTML</strong> и касадные таблицы стилей <strong>CSS</strong>
+    </p>
+     <script>
+        document.querySelector('time').setAttribute('datetime', new Date().toISOString().split('T')[0]);
+    </script>
+</body>
+</html>

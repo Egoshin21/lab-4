@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Дорожные знаки</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <style>
+        .tooltip {
+            position: relative;
+        }
+
+        .tooltip .ui-tooltip {
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
+            z-index: 1;
+        }
+
+        img {
+            width: 100px;
+            margin: 10px;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $(document).tooltip({
+                items: "img",
+                content: function () {
+                    var $element = $(this);
+                    if ($element.is("img")) {
+                        return $element.data('hint');
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p>
+    <img src="img/signs/1.png" class="tooltip" data-hint="<b>Предупреждающие знаки</b><br>1.23 Дети">
+    <img src="img/signs/2.png" class="tooltip" data-hint="<b>Предупреждающие знаки</b><br>1.9 Разводной мост">
+    <img src="img/signs/3.png" class="tooltip" data-hint="<b>Предупреждающие знаки</b><br>1.16 Неровная дорога">
+    <img src="img/signs/4.png" class="tooltip" data-hint="<b>Предупреждающие знаки</b><br>1.27 Дикие животные">
+    <img src="img/signs/5.png" class="tooltip" data-hint="<b>Предупреждающие знаки</b><br>1.32 Затор">
+</p>
+
+<p>
+    <img src="img/signs/6.png" class="tooltip" data-hint="<b>Дорожные знаки</b><br>2.1 Главная дорога">
+    <img src="img/signs/7.png" class="tooltip" data-hint="<b>Дорожные знаки</b><br>2.4 Уступите дорогу">
+    <img src="img/signs/8.png" class="tooltip" data-hint="<b>Дорожные знаки</b><br>3.1 Въезд запрещен">
+    <img src="img/signs/9.png" class="tooltip" data-hint="<b>Дорожные знаки</b><br>3.27 Остановка запрещена">
+    <img src="img/signs/10.png" class="tooltip" data-hint="<b>Дорожные знаки</b><br>3.20 Обгон запрещен">
+</p>
+
+<p>
+    <img src="img/signs/11.png" class="tooltip" data-hint="<b>Дорожные знаки</b><br>5.1 Автомагистраль">
+    <img src="img/signs/12.png" class="tooltip" data-hint="<b>Дорожные знаки</b><br>4.6 Ограничение максимальной скорости">
+    <img src="img/signs/13.png" class="tooltip" data-hint="<b>Дорожные знаки</b><br>5.9 Конец реверсивного движения">
+    <img src="img/signs/14.png" class="tooltip" data-hint="<b>Дорожные знаки</b><br>6.4 Место стоянки">
+    <img src="img/signs/15.png" class="tooltip" data-hint="<b>Дорожные знаки</b><br>4.3 Круговое движение">
+</p>
+
+</body>
+</html>
